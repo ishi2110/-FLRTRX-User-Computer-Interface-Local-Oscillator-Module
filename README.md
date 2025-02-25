@@ -1,3 +1,8 @@
-# ECE295_Tutorial2
+# FLRTRX: User & Computer Interface + Local Oscillator Module
 
-This repository contains the code snippets to help you complete Tutorial 2. Begin by opening the .cproj file. In the solution explorer you can find main.c, i2c.c, and i2c.h. Fill in the appropriate code to communicate over I2C as described in the Tutorial 2 document.
+A radio with two modes: User and Computer. The User Interface allows direct human interaction through input mechanisms such as buttons and switches. Meanwhile, the Computer Interface leverages Data Terminal Ready (DTR) signals via a USB-Series board to control the TX/RX switch. A high DTR signal activates TX mode, while a low signal engages RX mode.
+
+To enable computer control over the Local Oscillator Frequency (fLO) and TX/RX switch, we’ve integrated a microcontroller (MCU). This setup uses a Computer-Aided Transceiver (CAT) to communicate through a serial protocol. Commands are translated by a daughter card, specifically the FT232 module, into Universal Asynchronous Receiver/Transmitter (UART) signals, TXD, and RXD.
+
+Importantly, control over the TX/RX switch is exclusive to the User or Computer interface at any given time, ensuring seamless and efficient operation.
+A radio with two modes: User and Computer. The User Interface allows direct human interaction through input mechanisms such as buttons and switches. Meanwhile, the Computer Interface leverages Data Terminal Ready (DTR) signals via a USB-Series board to control the TX/RX switch. A high DTR signal activates TX mode, while a low signal engages RX mode. To enable computer control over the Local Oscillator Frequency (fLO) and TX/RX switch, we’ve integrated a microcontroller (MCU). This setup uses a Computer-Aided Transceiver (CAT) to communicate through a serial protocol. Commands are translated by a daughter card, specifically the FT232 module, into Universal Asynchronous Receiver/Transmitter (UART) signals, TXD, and RXD. Importantly, control over the TX/RX switch is exclusive to the User or Computer interface at any given time, ensuring seamless and efficient operation.
